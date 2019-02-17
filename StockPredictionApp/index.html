@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.14.2/dist/tf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <title>Stock Prediction</title>
+</head>
+
+<body>
+    <div class="col-sm-12 col-md-12" style="padding: 70px 0 0 70px;">
+        <div class="row">
+            <div class="col-sm-4 col-md-4">
+                <div id="custom-search-form" class="form-search form-horizontal">
+                    <div class="input-group">
+                        <input id="company" type="text" class="form-control" placeholder="Search for...">
+                        <span class="input-group-btn">
+                            <button id="getCompany" class="btn btn-default" style="z-index: 99;" type="submit">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+                <div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Company</th>
+                                <th>Symbol</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Google</td>
+                                <td>GOOGL</td>
+                            </tr>
+                            <tr>
+                                <td>Apple</td>
+                                <td>AAPL</td>
+                            </tr>
+                            <tr>
+                                <td>Microsoft</td>
+                                <td>MSFT</td>
+                            </tr>
+                            <tr>
+                                <td>Amazon</td>
+                                <td>AMZN</td>
+                            </tr>
+                            <tr>
+                                <td>Tesla</td>
+                                <td>TSLA</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="cnn"></div>
+            </div>
+            <div class="col-sm-8 col-md-8">
+                <div style="width:90%;">
+                    <canvas id="canvas"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/helpers.js"></script>
+    <script src="js/prediction.js"></script>
+    <script src="js/plot.js"></script>
+</body>
+
+</html>
