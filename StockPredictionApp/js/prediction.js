@@ -76,7 +76,6 @@ const cnn = function (model, data, epochs) {
 
             // Train the model
             model.fit(data.tensorTrainX, data.tensorTrainY, {
-                batchSize: 16,
                 epochs: epochs
             }).then(function (result) {
                 /*for (let i = result.epoch.length-1; i < result.epoch.length; ++i) {
